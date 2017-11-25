@@ -138,12 +138,12 @@ class WeatherApp {
   }
 
   dataByCoords(lat, lon) {
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${this.unitSystem}&appid=82a6681567e9644f377a9057d6932ed1`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${this.unitSystem}&appid=82a6681567e9644f377a9057d6932ed1`;
     return this.getData(url);
   }
 
   dataByCity(city) {
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${this.unitSystem}&appid=82a6681567e9644f377a9057d6932ed1`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${this.unitSystem}&appid=82a6681567e9644f377a9057d6932ed1`;
     return this.getData(url);
   }
 

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700,700i" rel="stylesheet">
+  <title>Weather App</title>
+</head>
+<body>
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <p id="modalError"></p>
+    <button class="modal-btn" id="modalBtn">CLOSE</button>
+  </div>
+</div>
+<div class="app">
+  <div class="background">
+    <img src="" alt="" id="weatherPic" class="weather-pic">
+    <p id="temp" class="temp"></p>
+  </div>
+  <form class="city-form">
+    <input type="text" id="cityInput" placeholder="Type your city..." class="city-input">
+    <button id="citySubmit" class="city-submit">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      	 viewBox="0 0 80 80" enable-background="new 0 0 80 80" xml:space="preserve">
+      <path d="M80,73.157L60.427,53.581c3.721-5.111,5.943-11.386,5.943-18.193c0-17.112-13.871-30.981-30.982-30.981
+      	c-17.112,0-30.981,13.869-30.981,30.981c0,17.111,13.869,30.982,30.981,30.982c6.808,0,13.082-2.223,18.193-5.943L73.157,80
+      	L80,73.157z M35.388,56.688c-11.745,0-21.299-9.557-21.299-21.3c0-11.745,9.555-21.299,21.299-21.299
+      	c11.743,0,21.3,9.555,21.3,21.299C56.688,47.131,47.131,56.688,35.388,56.688z"/>
+      </svg>
+    </button>
+  </form>
+  <div class="details">
+    <div class="details-info"></div>
+    <div class="btn-wrapper">
+      <button class="unit-btn active" id="metric">&deg;C</button>
+      <button class="unit-btn" id="imperial">&deg;F</button>
+    </div>
+  </div>
+  <button id="toggleDetails" class="toggle-btn">
+    <svg  style="enable-background:new 0 0 64 64;" version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g>
+    	<g transform="translate(237.000000, 335.000000)">
+    	<polyline points="-218.7,-308.6 -216.7,-310.6 -205,-298.8 -193.3,-310.6 -191.3,-308.6 -205,-294.9      -218.7,-308.6    "/>
+    	</g>
+    </g>
+    </svg>
+  </button>
+</div>
+<script src="js/WeatherApp.js"></script>
+<script>
+  new WeatherApp();
+</script>
+</body>
+</html>

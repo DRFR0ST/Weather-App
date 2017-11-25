@@ -123,6 +123,7 @@ class WeatherApp {
       let SRmin = sunrise.getUTCMinutes() + minDiff;
       let SShr = sunset.getUTCHours() + hrDiff;
       SShr = SShr < 0 ? 24+SShr : SShr;
+      SRhr = SRhr >= 24 ? SRhr-24 : SRhr;
       let SSmin = sunset.getUTCMinutes() + minDiff;
       SShr = SShr < 10 ? "0" + SShr.toString() : SShr.toString();
       SSmin = SSmin < 10 ? "0" + SSmin.toString() : SSmin.toString();
